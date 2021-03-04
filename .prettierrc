@@ -1,0 +1,19 @@
+{
+	"printWidth": 1000,
+	"useTabs": true,
+	"tabWidth": 4,
+	"trailingComma": "none",
+	"semi": true,
+	"quoteProps": "preserve",
+	"bracketSpacing": true,
+	"arrowParens": "always",
+	"htmlWhitespaceSensitivity": "strict",
+	"overrides": [
+		{
+			"files": ".prettierrc",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
+}
