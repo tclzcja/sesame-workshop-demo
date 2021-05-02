@@ -1,0 +1,13 @@
+widget-video-player {
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+widget-video-player > video {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	cursor: pointer;
+}

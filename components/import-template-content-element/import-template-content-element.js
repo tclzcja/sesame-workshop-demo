@@ -5,6 +5,6 @@ export default class extends HTMLElement {
 
 	connectedCallback() {
 		this.innerHTML = "";
-		this.appendChild(document.querySelector(`template[data-is=${this.tagName.toLowerCase()}]`).content.cloneNode(true));
+		this.appendChild(document.querySelector(`template[data-is=${this.tagName.toLowerCase()}]`)?.content.cloneNode(true));
 	}
 }

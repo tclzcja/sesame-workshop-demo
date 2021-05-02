@@ -1,0 +1,55 @@
+widget-click-and-play {
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	background-color: cornflowerblue;
+}
+
+widget-click-and-play > audio {
+	display: none;
+}
+
+widget-click-and-play > main {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: white;
+	background-color: royalblue;
+	transition: font-size 0.2s;
+}
+
+widget-click-and-play > main.shaking {
+	animation-name: shaking;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	font-size: 3rem;
+}
+
+@keyframes shaking {
+	0%,
+	100% {
+		transform: rotateZ(0);
+	}
+	10%,
+	90% {
+		transform: rotateZ(15deg);
+	}
+	20%,
+	80% {
+		transform: rotateZ(-15deg);
+	}
+	30%,
+	70% {
+		transform: rotateZ(15deg);
+	}
+	40%,
+	60% {
+		transform: rotateZ(-15deg);
+	}
+	50% {
+		transform: rotateZ(15deg);
+	}
+}

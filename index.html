@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title></title>
+		<title>Sesame Play</title>
 		<meta name="description" content="Demo site for future SW websites" />
 		<meta charset="UTF-8" />
 		<meta name="version" content="1.0.0" />
@@ -14,12 +14,19 @@
 
 	<body>
 		<template data-is="page-play">
-			<a href="/" class="clickable">
+			<a href="./" class="clickable">
 				<svg>
 					<use xlink:href="./assets/icon/logo.svg#logo"></use>
 				</svg>
 			</a>
-			<main></main>
+			<main>
+				<section data-layout="t1b2" class="on">
+					<widget-multiple-choices data-order="2"></widget-multiple-choices>
+					<widget-click-and-play data-order="3"></widget-click-and-play>
+					<widget-video-player data-order="1"></widget-video-player>
+				</section>
+				<section data-layout="t3b3"></section>
+			</main>
 			<nav class="prev-1 clickable">
 				<svg>
 					<use xlink:href="./assets/icon/prev-1.svg#prev-1"></use>
@@ -46,7 +53,26 @@
 				</svg>
 				<main></main>
 			</aside>
-			<footer class="background-2"></footer>
+			<footer></footer>
+		</template>
+
+		<template data-is="widget-video-player">
+			<video src="./assets/video/video.mp4" controls preload="auto" poster="./assets/image/background-1.png"></video>
+		</template>
+
+		<template data-is="widget-multiple-choices">
+			<header>Which character is missing in the video?</header>
+			<ol>
+				<li>Elmo is missing from the video Elmo is missing from the video</li>
+				<li>Big Bird</li>
+				<li>Cookie Monster is missing Cookie Monster is missing Cookie Monster is missing Cookie Monster is missingCookie Monster is missing Cookie Monster is missing Cookie Monster is missing Cookie Monster is missing Cookie Monster is missing Cookie Monster is missing Cookie Monster is missing</li>
+				<li>All above</li>
+			</ol>
+		</template>
+
+		<template data-is="widget-click-and-play">
+			<main>Explorer</main>
+			<audio src="./assets/audio/explore.mp3" preload="auto"></audio>
 		</template>
 
 		<app-router>
