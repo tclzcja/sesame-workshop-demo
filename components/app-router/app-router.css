@@ -1,0 +1,11 @@
+app-router {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+app-router > * {
+	display: block;
+	height: 100%;
+	width: 100%;
+}

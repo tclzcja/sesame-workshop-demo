@@ -1,0 +1,19 @@
+page-play {
+	--width-button: 60px;
+	--gap: 20px;
+	background-color: lightgray;
+	display: grid;
+	grid-template-columns: var(--width-button) 1fr var(--width-button);
+	grid-template-rows: var(--width-button) 1fr var(--width-button);
+	gap: var(--gap);
+	padding: var(--gap);
+}
+
+page-play > * {
+	background-color: white;
+	border-radius: 15%;
+}
+
+page-play > a {
+	padding: 5px;
+}

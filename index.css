@@ -1,0 +1,85 @@
+@import "./components/app-router/app-router.css";
+@import "./components/page-play/page-play.css";
+
+:root {
+	font-size: 16px;
+	--padding: 1rem;
+	--padding-half: calc(var(--padding) / 2);
+	--padding-double: calc(var(--padding) * 2);
+	--padding-triple: calc(var(--padding) * 3);
+	--padding-penta: calc(var(--padding) * 5);
+	--padding-side-desktop: calc(var(--padding) * 4);
+	--transition-time: 1s;
+	--transition-time-half: calc(var(--transition-time) / 2);
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+@font-face {
+	font-family: SesameWkshp Bd;
+	src: url(./site-assets/sesamewkshp-bold.woff2) format("woff2");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+	box-sizing: border-box;
+}
+
+[hidden] {
+	display: none;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	user-select: none;
+	-webkit-user-select: none;
+	font-family: sans-serif;
+	position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-blue);
+}
+
+input {
+	cursor: pointer;
+	border: none;
+	font-family: sans-serif;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+h1 {
+	font-size: 2rem;
+	margin-bottom: var(--padding);
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+svg,
+svg > use {
+	height: 100%;
+	width: 100%;
+}

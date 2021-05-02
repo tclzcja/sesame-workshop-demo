@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta name="description" content="Demo site for future SW websites" />
+		<meta charset="UTF-8" />
+		<meta name="version" content="1.0.0" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" type="image/png" href="./site-assets/favicon.png" />
+		<link rel="stylesheet" href="./index.css" />
+
+		<script type="module" src="./index.js"></script>
+	</head>
+
+	<body>
+		<template data-is="page-play">
+			<a href="/">
+				<svg>
+					<use xlink:href="./assets/icon/logo.svg#logo"></use>
+				</svg>
+			</a>
+		</template>
+
+		<app-router>
+			<app-route path="/" element="page-play"></app-route>
+		</app-router>
+	</body>
+</html>
