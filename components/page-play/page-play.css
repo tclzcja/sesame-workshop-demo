@@ -22,6 +22,7 @@ page-play > *[disabled] {
 	background-color: white !important;
 	fill: gray !important;
 	cursor: default;
+	transform: none !important;
 }
 
 page-play > *.clickable:active {
