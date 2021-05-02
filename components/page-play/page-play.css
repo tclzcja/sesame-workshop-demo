@@ -1,19 +1,77 @@
 page-play {
 	--width-button: 60px;
-	--gap: 20px;
+	--gap: 15px;
+	--transition-time: 0.25s;
 	background-color: lightgray;
 	display: grid;
 	grid-template-columns: var(--width-button) 1fr var(--width-button);
-	grid-template-rows: var(--width-button) 1fr var(--width-button);
+	grid-template-rows: var(--width-button) 1fr var(--width-button) var(--width-button);
 	gap: var(--gap);
 	padding: var(--gap);
 }
 
 page-play > * {
 	background-color: white;
-	border-radius: 15%;
+	border-radius: var(--gap);
+	transition: background-color var(--transition-time), fill var(--transition-time);
+}
+
+page-play > *[disabled] {
+	opacity: 0.3;
+	background-color: white !important;
+	fill: gray !important;
+	cursor: default;
 }
 
 page-play > a {
 	padding: 5px;
+}
+
+page-play > main {
+	grid-column: 2/2;
+	grid-row: 1/5;
+}
+
+page-play > nav {
+	padding: 15px;
+	cursor: pointer;
+	fill: gray;
+}
+
+page-play > nav:hover {
+	background-color: gray;
+	fill: white;
+}
+
+page-play > nav.prev-1 {
+	grid-column: 1;
+	grid-row: 3;
+}
+
+page-play > nav.prev {
+	grid-column: 1;
+	grid-row: 4;
+}
+
+page-play > nav.next {
+	grid-column: 3;
+	grid-row: 4;
+}
+
+page-play > nav.done {
+	grid-column: 3;
+	grid-row: 3;
+}
+
+page-play > aside {
+	grid-column: 3;
+	grid-row: 1;
+	padding: 15px;
+	fill: royalblue;
+	cursor: pointer;
+}
+
+page-play > aside:hover {
+	background-color: royalblue;
+	fill: white;
 }
