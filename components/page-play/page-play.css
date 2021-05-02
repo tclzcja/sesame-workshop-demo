@@ -14,6 +14,7 @@ page-play > * {
 	background-color: white;
 	border-radius: var(--gap);
 	transition: background-color var(--transition-time), fill var(--transition-time);
+	z-index: 2;
 }
 
 page-play > *[disabled] {
@@ -21,6 +22,10 @@ page-play > *[disabled] {
 	background-color: white !important;
 	fill: gray !important;
 	cursor: default;
+}
+
+page-play > *.clickable:active {
+	transform: scale(0.9);
 }
 
 page-play > a {
@@ -74,4 +79,30 @@ page-play > aside {
 page-play > aside:hover {
 	background-color: royalblue;
 	fill: white;
+}
+
+page-play > footer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border-radius: 0;
+}
+
+page-play > footer.blur {
+	filter: blur(30px);
+}
+
+page-play > footer.background-1 {
+	background-image: url(../../assets/image/background-1.png);
+}
+
+page-play > footer.background-2 {
+	background-image: url(../../assets/image/background-2.jpg);
 }

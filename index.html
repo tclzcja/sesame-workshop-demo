@@ -14,37 +14,39 @@
 
 	<body>
 		<template data-is="page-play">
-			<a href="/">
+			<a href="/" class="clickable">
 				<svg>
 					<use xlink:href="./assets/icon/logo.svg#logo"></use>
 				</svg>
 			</a>
 			<main></main>
-			<nav class="prev-1">
+			<nav class="prev-1 clickable">
 				<svg>
 					<use xlink:href="./assets/icon/prev-1.svg#prev-1"></use>
 				</svg>
 			</nav>
-			<nav class="prev">
+			<nav class="prev clickable">
 				<svg>
 					<use xlink:href="./assets/icon/prev.svg#prev"></use>
 				</svg>
 			</nav>
-			<nav class="next">
+			<nav class="next clickable">
 				<svg>
 					<use xlink:href="./assets/icon/next.svg#next"></use>
 				</svg>
 			</nav>
-			<nav class="done" disabled>
+			<nav class="done clickable" disabled>
 				<svg>
 					<use xlink:href="./assets/icon/done.svg#done"></use>
 				</svg>
 			</nav>
-			<aside>
+			<aside class="clickable">
 				<svg>
 					<use xlink:href="./assets/icon/settings.svg#settings"></use>
 				</svg>
+				<main></main>
 			</aside>
+			<footer class="background-2"></footer>
 		</template>
 
 		<app-router>
