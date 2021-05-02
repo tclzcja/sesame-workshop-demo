@@ -1,0 +1,22 @@
+widget-hotzone {
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-image: url(../../assets/image/widget-hotzone.jpg);
+	position: relative;
+}
+
+widget-hotzone > main {
+	background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	position: absolute;
+	top: 45.5%;
+	height: 14%;
+	left: 25%;
+	right: 25%;
+}
+
+widget-hotzone > main:hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}

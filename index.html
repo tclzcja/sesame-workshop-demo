@@ -6,7 +6,7 @@
 		<meta charset="UTF-8" />
 		<meta name="version" content="1.0.0" />
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<link rel="icon" type="image/png" href="./site-assets/favicon.png" />
+		<link rel="icon" type="image/png" href="./assets/image/favicon.png" />
 		<link rel="stylesheet" href="./index.css" />
 
 		<script type="module" src="./index.js"></script>
@@ -25,7 +25,25 @@
 					<widget-click-and-play data-order="1"></widget-click-and-play>
 					<widget-video-player data-order="2"></widget-video-player>
 				</section>
-				<section data-layout="t3b3"></section>
+				<section data-layout="m1">
+					<widget-hotzone data-order="1"></widget-hotzone>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
+				<section data-layout="t3b3">
+					<widget-click-and-play data-order="1"></widget-click-and-play>
+					<widget-click-and-play data-order="2"></widget-click-and-play>
+					<widget-click-and-play data-order="3"></widget-click-and-play>
+					<widget-click-and-play data-order="4"></widget-click-and-play>
+					<widget-click-and-play data-order="5"></widget-click-and-play>
+					<widget-click-and-play data-order="6"></widget-click-and-play>
+				</section>
 			</main>
 			<nav class="prev-1 clickable">
 				<svg>
@@ -74,6 +92,10 @@
 		<template data-is="widget-click-and-play">
 			<main>Explorer</main>
 			<audio src="./assets/audio/explore.mp3" preload="auto"></audio>
+		</template>
+
+		<template data-is="widget-hotzone">
+			<main></main>
 		</template>
 
 		<app-router>
