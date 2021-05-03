@@ -1,0 +1,9 @@
+widget-html5-game {
+	border: dashed 1px darkgray;
+}
+
+widget-html5-game > iframe {
+	height: 100%;
+	width: 100%;
+	border: none;
+}

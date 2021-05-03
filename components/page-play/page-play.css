@@ -2,6 +2,7 @@
 @import "../widget-video-player/widget-video-player.css";
 @import "../widget-click-and-play/widget-click-and-play.css";
 @import "../widget-hotzone/widget-hotzone.css";
+@import "../widget-html5-game/widget-html5-game.css";
 
 page-play {
 	--width-button: 60px;
@@ -191,6 +192,16 @@ page-play > main > section[data-layout="m1"] > * {
 page-play > main > section[data-layout="m1"] > *[data-order="1"] {
 	grid-column: 2;
 	grid-row: 2;
+}
+
+page-play > main > section[data-layout="a"] {
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+}
+
+page-play > main > section[data-layout="a"] > *[data-order="1"] {
+	grid-column: 1;
+	grid-row: 1;
 }
 
 page-play > footer {
