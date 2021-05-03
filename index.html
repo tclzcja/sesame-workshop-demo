@@ -13,7 +13,63 @@
 	</head>
 
 	<body>
-		<template data-is="page-play">
+		<template data-is="page-play-1">
+			<a href="./" class="logo clickable">
+				<svg>
+					<use xlink:href="./assets/icon/logo.svg#logo"></use>
+				</svg>
+			</a>
+			<main>
+				<section data-layout="l2r1" class="on">
+					<widget-multiple-choices data-order="3"></widget-multiple-choices>
+					<widget-click-and-play data-order="1"></widget-click-and-play>
+					<widget-video-player data-order="2"></widget-video-player>
+				</section>
+				<section data-layout="m1">
+					<widget-hotzone data-order="1"></widget-hotzone>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</section>
+				<section data-layout="a">
+					<widget-html5-game data-order="1"></widget-html5-game>
+				</section>
+			</main>
+			<nav class="prev-1 clickable">
+				<svg>
+					<use xlink:href="./assets/icon/prev-1.svg#prev-1"></use>
+				</svg>
+			</nav>
+			<nav class="prev clickable">
+				<svg>
+					<use xlink:href="./assets/icon/prev.svg#prev"></use>
+				</svg>
+			</nav>
+			<nav class="next clickable">
+				<svg>
+					<use xlink:href="./assets/icon/next.svg#next"></use>
+				</svg>
+			</nav>
+			<nav class="done clickable" disabled>
+				<svg>
+					<use xlink:href="./assets/icon/done.svg#done"></use>
+				</svg>
+			</nav>
+			<aside class="clickable">
+				<svg>
+					<use xlink:href="./assets/icon/settings.svg#settings"></use>
+				</svg>
+				<main></main>
+			</aside>
+			<footer></footer>
+		</template>
+
+		<template data-is="page-play-2">
 			<a href="./" class="clickable">
 				<svg>
 					<use xlink:href="./assets/icon/logo.svg#logo"></use>
@@ -94,12 +150,16 @@
 		</template>
 
 		<template data-is="widget-html5-game">
-			<iframe src="./assets/game/K2_4B_A_a_Sound_to_Picture_Match - Short/index.html"></iframe>
+			<iframe src="./assets/game/P3_3B_WhatOrder_Counting_Five/index.html"></iframe>
 		</template>
 
 		<app-router>
-			<app-route path="/" element="page-play"></app-route>
-			<app-route path="/sesame-workshop-demo/" element="page-play"></app-route>
+			<app-route path="/" element="page-play-1"></app-route>
+			<app-route path="/play-1" element="page-play-1"></app-route>
+			<app-route path="/play-2" element="page-play-2"></app-route>
+			<app-route path="/sesame-workshop-demo/" element="page-play-1"></app-route>
+			<app-route path="/sesame-workshop-demo/play-1" element="page-play-1"></app-route>
+			<app-route path="/sesame-workshop-demo/play-2/" element="page-play-2"></app-route>
 		</app-router>
 	</body>
 </html>
