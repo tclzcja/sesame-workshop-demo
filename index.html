@@ -14,9 +14,9 @@
 
 	<body>
 		<template data-is="page-play-1">
-			<a href="./" class="logo clickable">
+			<a href="./" class="home clickable">
 				<svg>
-					<use xlink:href="./assets/icon/logo.svg#logo"></use>
+					<use xlink:href="./assets/icon/home.svg#home"></use>
 				</svg>
 			</a>
 			<main>
@@ -40,9 +40,9 @@
 					<widget-html5-game data-order="1"></widget-html5-game>
 				</section>
 			</main>
-			<nav class="prev-1 clickable">
+			<nav class="first clickable">
 				<svg>
-					<use xlink:href="./assets/icon/prev-1.svg#prev-1"></use>
+					<use xlink:href="./assets/icon/first.svg#first"></use>
 				</svg>
 			</nav>
 			<nav class="prev clickable">
@@ -60,47 +60,19 @@
 					<use xlink:href="./assets/icon/done.svg#done"></use>
 				</svg>
 			</nav>
-			<aside class="clickable">
+			<a class="user clickable" href="./play-2">
 				<svg>
-					<use xlink:href="./assets/icon/settings.svg#settings"></use>
+					<use xlink:href="./assets/icon/user.svg#user"></use>
 				</svg>
-				<main></main>
-			</aside>
+			</a>
 			<footer></footer>
 		</template>
 
 		<template data-is="page-play-2">
-			<a href="./" class="clickable">
-				<svg>
-					<use xlink:href="./assets/icon/logo.svg#logo"></use>
-				</svg>
-			</a>
-			<main>
-				<section data-layout="l2r1" class="on">
-					<widget-multiple-choices data-order="3"></widget-multiple-choices>
-					<widget-click-and-play data-order="1"></widget-click-and-play>
-					<widget-video-player data-order="2"></widget-video-player>
-				</section>
-				<section data-layout="m1">
-					<widget-hotzone data-order="1"></widget-hotzone>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-				</section>
-				<section data-layout="a">
-					<widget-html5-game data-order="1"></widget-html5-game>
-				</section>
-			</main>
-			<nav class="prev-1 clickable">
-				<svg>
-					<use xlink:href="./assets/icon/prev-1.svg#prev-1"></use>
-				</svg>
-			</nav>
+			<header>
+				<div>Grammarrrerrrrr Made Easy</div>
+				<div>Ears</div>
+			</header>
 			<nav class="prev clickable">
 				<svg>
 					<use xlink:href="./assets/icon/prev.svg#prev"></use>
@@ -111,18 +83,24 @@
 					<use xlink:href="./assets/icon/next.svg#next"></use>
 				</svg>
 			</nav>
-			<nav class="done clickable" disabled>
+			<a href="./play-1" class="clickable">
 				<svg>
-					<use xlink:href="./assets/icon/done.svg#done"></use>
+					<use xlink:href="./assets/icon/user.svg#user"></use>
 				</svg>
-			</nav>
-			<aside class="clickable">
-				<svg>
-					<use xlink:href="./assets/icon/settings.svg#settings"></use>
-				</svg>
-				<main></main>
-			</aside>
-			<footer></footer>
+			</a>
+			<main>
+				<section data-layout="l2r1" class="on">
+					<widget-multiple-choices data-order="3"></widget-multiple-choices>
+					<widget-click-and-play data-order="1"></widget-click-and-play>
+					<widget-video-player data-order="2"></widget-video-player>
+				</section>
+				<section data-layout="a">
+					<widget-hotzone data-order="1"></widget-hotzone>
+				</section>
+				<section data-layout="a">
+					<widget-html5-game data-order="1"></widget-html5-game>
+				</section>
+			</main>
 		</template>
 
 		<template data-is="widget-video-player">
@@ -158,7 +136,7 @@
 			<app-route path="/play-1" element="page-play-1"></app-route>
 			<app-route path="/play-2" element="page-play-2"></app-route>
 			<app-route path="/sesame-workshop-demo/" element="page-play-1"></app-route>
-			<app-route path="/sesame-workshop-demo/play-1" element="page-play-1"></app-route>
+			<app-route path="/sesame-workshop-demo/play-1/" element="page-play-1"></app-route>
 			<app-route path="/sesame-workshop-demo/play-2/" element="page-play-2"></app-route>
 		</app-router>
 	</body>

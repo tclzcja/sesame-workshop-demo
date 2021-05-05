@@ -5,93 +5,80 @@
 @import "../widget-html5-game/widget-html5-game.css";
 
 page-play-2 {
-	--width-button: 60px;
 	--gap: 15px;
+	--width-button: 80px;
 	--transition-time: 0.25s;
 	--transition-time-double: calc(var(--transition-time) * 2);
-	background-color: cornsilk;
+	background-color: white;
 	display: grid;
-	grid-template-columns: var(--width-button) 1fr var(--width-button);
-	grid-template-rows: var(--width-button) 1fr var(--width-button) var(--width-button);
+	grid-template-columns: var(--width-button) 1fr 100vmin var(--width-button);
+	grid-template-rows: var(--width-button) 1fr var(--width-button);
 	gap: var(--gap);
 	padding: var(--gap);
+	color: #444;
+	fill: currentColor;
 }
 
 page-play-2 > * {
-	background-color: white;
-	border-radius: var(--gap);
 	transition: background-color var(--transition-time), fill var(--transition-time);
 	z-index: 2;
-	box-shadow: 0 10px 30px 5px rgba(66, 66, 66, 0.2);
+	border-radius: calc(var(--gap) / 2);
+	padding: var(--gap);
 }
 
-page-play-2 > *[disabled] {
-	opacity: 0.3;
-	background-color: white !important;
-	fill: gray !important;
-	cursor: default;
-	transform: none !important;
+page-play-2 > *.clickable:hover {
+	background-color: currentColor;
+	fill: white;
+	cursor: pointer;
 }
 
 page-play-2 > *.clickable:active {
 	transform: scale(0.95);
-	transform-origin: center bottom;
-	box-shadow: 0 8px 15px 2px rgba(66, 66, 66, 0.2);
 }
 
-page-play-2 > a {
-	padding: 5px;
+page-play-2 > header {
+	font-size: 3rem;
+	grid-column: 1/3;
+	grid-row: 1/3;
+}
+
+page-play-2 > header > div:first-of-type {
+	border-bottom: solid 1px currentColor;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 page-play-2 > nav {
-	padding: 15px;
-	cursor: pointer;
-	fill: gray;
-}
-
-page-play-2 > nav:hover {
-	background-color: gray;
-	fill: white;
-}
-
-page-play-2 > nav.prev-1 {
-	grid-column: 1;
-	grid-row: 3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 25%;
 }
 
 page-play-2 > nav.prev {
 	grid-column: 1;
-	grid-row: 4;
-}
-
-page-play-2 > nav.next {
-	grid-column: 3;
-	grid-row: 4;
-}
-
-page-play-2 > nav.done {
-	grid-column: 3;
 	grid-row: 3;
 }
 
-page-play-2 > aside {
-	grid-column: 3;
-	grid-row: 1;
-	padding: 15px;
-	fill: royalblue;
-	cursor: pointer;
+page-play-2 > nav.next {
+	grid-column: 4;
+	grid-row: 3;
 }
 
-page-play-2 > aside:hover {
-	background-color: royalblue;
-	fill: white;
+page-play-2 > a {
+	grid-column: 4;
+	grid-row: 1;
+	padding: 25%;
 }
 
 page-play-2 > main {
-	grid-column: 2/2;
-	grid-row: 1/5;
+	grid-column: 3;
+	grid-row: 1/4;
 	overflow: hidden;
 	position: relative;
+	background-color: white;
+	transition: background-color var(--transition-time), fill var(--transition-time);
+	z-index: 2;
 }
 
 page-play-2 > main > section {
@@ -102,12 +89,11 @@ page-play-2 > main > section {
 	width: 100%;
 	overflow: hidden;
 	display: grid;
-	padding: var(--gap);
-	gap: var(--gap);
 	z-index: 1;
 	opacity: 0;
 	transition: transform var(--transition-time-double), opacity var(--transition-time-double);
 	transform: translateX(-100%);
+	border-radius: calc(var(--gap) / 2);
 }
 
 page-play-2 > main > section.on {
@@ -119,10 +105,6 @@ page-play-2 > main > section.on {
 page-play-2 > main > section.on ~ section {
 	z-index: 1;
 	transform: translateX(100%);
-}
-
-page-play-2 > main > section > * {
-	border-radius: calc(var(--gap) / 2);
 }
 
 page-play-2 > main > section[data-layout="l2r1"] {
@@ -180,20 +162,6 @@ page-play-2 > main > section[data-layout="t3b3"] > *[data-order="6"] {
 	grid-row: 2;
 }
 
-page-play-2 > main > section[data-layout="m1"] {
-	grid-template-columns: 1fr 66vmin 1fr;
-	grid-template-rows: 1fr 66vmin 1fr;
-}
-
-page-play-2 > main > section[data-layout="m1"] > * {
-	background-color: lightyellow;
-}
-
-page-play-2 > main > section[data-layout="m1"] > *[data-order="1"] {
-	grid-column: 2;
-	grid-row: 2;
-}
-
 page-play-2 > main > section[data-layout="a"] {
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
@@ -202,31 +170,4 @@ page-play-2 > main > section[data-layout="a"] {
 page-play-2 > main > section[data-layout="a"] > *[data-order="1"] {
 	grid-column: 1;
 	grid-row: 1;
-}
-
-page-play-2 > footer {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	z-index: 1;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: 0;
-	background-color: transparent;
-}
-
-page-play-2 > footer.blur {
-	filter: blur(30px);
-}
-
-page-play-2 > footer.background-1 {
-	background-image: url(../../assets/image/background-1.png);
-}
-
-page-play-2 > footer.background-2 {
-	background-image: url(../../assets/image/background-2.jpg);
 }

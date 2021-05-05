@@ -6,6 +6,7 @@ widget-multiple-choices {
 	flex-wrap: nowrap;
 	background-color: lightgray;
 	overflow: hidden;
+	color: black;
 }
 
 widget-multiple-choices > header {

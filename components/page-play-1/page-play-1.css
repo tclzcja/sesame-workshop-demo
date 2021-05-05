@@ -12,7 +12,7 @@ page-play-1 {
 	background-color: cornsilk;
 	display: grid;
 	grid-template-columns: var(--width-button) 1fr var(--width-button);
-	grid-template-rows: var(--width-button) 1fr var(--width-button) var(--width-button);
+	grid-template-rows: var(--width-button) var(--width-button) 1fr var(--width-button) var(--width-button);
 	gap: var(--gap);
 	padding: var(--gap);
 }
@@ -39,8 +39,23 @@ page-play-1 > *.clickable:active {
 	box-shadow: 0 8px 15px 2px rgba(66, 66, 66, 0.2);
 }
 
-page-play-1 > a.logo {
-	padding: 5px;
+page-play-1 > a.home {
+	padding: var(--gap);
+	grid-column: 1;
+	grid-row: 1;
+}
+
+page-play-1 > a.user {
+	padding: var(--gap);
+	grid-column: 3;
+	grid-row: 1;
+	fill: royalblue;
+	cursor: pointer;
+}
+
+page-play-1 > a.user:hover {
+	background-color: royalblue;
+	fill: white;
 }
 
 page-play-1 > nav {
@@ -54,42 +69,29 @@ page-play-1 > nav:hover {
 	fill: white;
 }
 
-page-play-1 > nav.prev-1 {
+page-play-1 > nav.first {
 	grid-column: 1;
-	grid-row: 3;
+	grid-row: 4;
 }
 
 page-play-1 > nav.prev {
 	grid-column: 1;
-	grid-row: 4;
+	grid-row: 5;
 }
 
 page-play-1 > nav.next {
 	grid-column: 3;
-	grid-row: 4;
+	grid-row: 5;
 }
 
 page-play-1 > nav.done {
 	grid-column: 3;
-	grid-row: 3;
-}
-
-page-play-1 > aside {
-	grid-column: 3;
-	grid-row: 1;
-	padding: 15px;
-	fill: royalblue;
-	cursor: pointer;
-}
-
-page-play-1 > aside:hover {
-	background-color: royalblue;
-	fill: white;
+	grid-row: 4;
 }
 
 page-play-1 > main {
 	grid-column: 2/2;
-	grid-row: 1/5;
+	grid-row: 1/6;
 	overflow: hidden;
 	position: relative;
 }

@@ -17,6 +17,13 @@ window.customElements.define(
 			super.connectedCallback();
 			this.querySelector("nav.next").addEventListener("click", (e) => this.next());
 			this.querySelector("nav.prev").addEventListener("click", (e) => this.prev());
+			//this.querySelector("nav.first").addEventListener("click", (e) => this.first());
+		}
+
+		first() {
+			const currentSection = this.querySelector(":scope > main > section.on");
+			currentSection.classList.remove("on");
+			this.querySelector(":scope > main > section:first-of-type").classList.add("on");
 		}
 
 		next() {
