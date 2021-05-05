@@ -13,19 +13,18 @@ Array.prototype.deepEqual = function (target) {
 window.customElements.define(
 	"app-router",
 	class extends HTMLElement {
+		routerMap = new Map();
+		previousPath = null;
+
 		constructor() {
 			super();
-			this.routerMap = new Map();
-			this.previousPath;
 		}
 
 		addRoute(pathKeyword, customElementTagName) {
 			this.routerMap.set(pathKeyword, customElementTagName);
-			this.navigate();
 		}
 
 		connectedCallback() {
-			const self = this;
 			const observer = new window.MutationObserver(function (mutations) {
 				for (let a of document.querySelectorAll("a:not([data-suppressed])")) {
 					a.setAttribute("data-suppressed", "");
@@ -42,8 +41,13 @@ window.customElements.define(
 				characterData: false,
 				subtree: true
 			});
-			window.addEventListener("popstate", function (e) {
-				self.navigate();
+			for (const route of this.querySelectorAll("app-route")) {
+				this.routerMap.set(route.getAttribute("path"), route.getAttribute("element"));
+				route.remove();
+			}
+			console.log(this.routerMap);
+			window.addEventListener("popstate", (e) => {
+				this.navigate();
 			});
 			// Deal with popstate event
 			this.navigate();
@@ -88,11 +92,6 @@ window.customElements.define(
 	class extends HTMLElement {
 		constructor() {
 			super();
-		}
-
-		connectedCallback() {
-			document.querySelector("app-router").addRoute(this.getAttribute("path"), this.getAttribute("element"));
-			this.remove();
 		}
 	}
 );

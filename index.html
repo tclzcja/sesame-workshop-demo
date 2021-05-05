@@ -103,6 +103,8 @@
 			</main>
 		</template>
 
+		<template data-is="page-index"> </template>
+
 		<template data-is="widget-video-player">
 			<video src="./assets/video/video.mp4" controls preload="auto" poster="./assets/image/background-1.png"></video>
 		</template>
@@ -132,7 +134,7 @@
 		</template>
 
 		<app-router>
-			<app-route path="/" element="page-play-1"></app-route>
+			<app-route path="/" element="page-index"></app-route>
 			<app-route path="/play-1" element="page-play-1"></app-route>
 			<app-route path="/play-2" element="page-play-2"></app-route>
 		</app-router>
