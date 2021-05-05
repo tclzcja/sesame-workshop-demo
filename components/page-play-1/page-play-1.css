@@ -15,6 +15,8 @@ page-play-1 {
 	grid-template-rows: var(--width-button) var(--width-button) 1fr var(--width-button) var(--width-button);
 	gap: var(--gap);
 	padding: var(--gap);
+	color: #444;
+	fill: currentColor;
 }
 
 page-play-1 > * {
@@ -33,6 +35,11 @@ page-play-1 > *[disabled] {
 	transform: none !important;
 }
 
+page-play-1 > *.clickable:hover {
+	fill: white;
+	background-color: currentColor;
+}
+
 page-play-1 > *.clickable:active {
 	transform: scale(0.95);
 	transform-origin: center bottom;
@@ -49,24 +56,15 @@ page-play-1 > a.user {
 	padding: var(--gap);
 	grid-column: 3;
 	grid-row: 1;
-	fill: royalblue;
+	color: royalblue;
+	fill: currentColor;
 	cursor: pointer;
-}
-
-page-play-1 > a.user:hover {
-	background-color: royalblue;
-	fill: white;
 }
 
 page-play-1 > nav {
 	padding: 15px;
 	cursor: pointer;
 	fill: gray;
-}
-
-page-play-1 > nav:hover {
-	background-color: gray;
-	fill: white;
 }
 
 page-play-1 > nav.first {
