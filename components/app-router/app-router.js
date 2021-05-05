@@ -19,8 +19,8 @@ window.customElements.define(
 			this.previousPath;
 		}
 
-		addRoute(path, customElementTagName) {
-			this.routerMap.set(path, customElementTagName);
+		addRoute(pathKeyword, customElementTagName) {
+			this.routerMap.set(pathKeyword, customElementTagName);
 			this.navigate();
 		}
 
@@ -58,9 +58,12 @@ window.customElements.define(
 			let tagName = null;
 			let keys = this.routerMap.keys();
 			for (let k of keys) {
-				if (k.split("/").deepEqual(window.location.pathname.replace("index.html", "").split("/"))) {
+				if (window.location.pathname.includes(k)) {
 					tagName = this.routerMap.get(k);
 				}
+				// if (k.split("/").deepEqual(window.location.pathname.replace("index.html", "").split("/"))) {
+				// 	tagName = this.routerMap.get(k);
+				// }
 			}
 			if (tagName) {
 				window.scroll(0, 0);
